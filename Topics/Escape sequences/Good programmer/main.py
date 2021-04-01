@@ -1,1 +1,1 @@
-topic(variabbles) : topic's variable now
+print(str("You\nare\nthe\nbest\nprogrammer!"))
