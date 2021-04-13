@@ -45,15 +45,15 @@ if price &gt; 500:
 else:
     print("That's too cheap!")
 # The output is 'That's too expensive!\nI can afford that!'</code></pre> 
-  <p>See? We got two contradicting messages instead of one that we originally intended to output. The difference between the above examples is that in the example with pets, the cases described by conditional statements are <em>mutually exclusive</em>, that is, there's no string that would be equal both to <code class="language-python">'dog'</code> and <code class="language-python">'cat'</code> at the same. In the other example, the cases aren't mutually exclusive, and there are values for <code class="language-python">price</code>that can satisfy both conditions. </p> 
-  <p>So, <code class="language-python">elif</code>statement is a better alternative than two <code class="language-python">if</code> statements when you want to show that only one of the conditions is supposed to be satisfied. A chain of <code class="language-python">if</code> statements implies that the conditions stated in them are totally unrelated and can be satisfied independently of each other, like in the following example:</p> 
+  <p>See? We got two contradicting messages instead of one that we originally intended to output. The difference between the above examples is that in the example with pets, the cases described by conditional statements are <em>mutually exclusive</em>, that is, there's no string that would be equal both to <code class="language-python">'dog'</code> and <code class="language-python">'cat'</code> at the same time. In the other example, the cases aren't mutually exclusive, and there are values for <code class="language-python">price</code> that can satisfy both conditions. </p> 
+  <p>So, <code class="language-python">elif</code> statement is a better alternative than two <code class="language-python">if</code> statements when you want to show that only one of the conditions is supposed to be satisfied. A chain of <code class="language-python">if</code> statements implies that the conditions stated in them are totally unrelated and can be satisfied independently of each other, like in the following example:</p> 
   <pre><code class="language-python">animal = 'unicorn'
 if animal in 'crow, dog, frog, pony':
     print('This animal exists')
 if animal in 'unicorn, pegasus, pony':
     print('This animal is a horse')</code></pre> 
   <p>With this distinction in mind, you'll be able to make your code more clear and less error-prone. Now, let's get back to studying <code class="language-python">elif</code> functionality. </p> 
-  <h2 style="text-align: center;"><strong>Multiple elifs and a decision tree</strong></h2> 
+  <h2 style="text-align: center;">Multiple elifs and a decision tree</h2> 
   <p>There can be as many <strong>elif</strong> statements as you need, so your conditions can be very detailed. No matter how many <strong>elif </strong>statements you have, the syntax is always the same. The only difference is that we add more <strong>elifs</strong>:</p> 
   <pre><code class="language-python"># multiple elifs syntax
 if condition1:
