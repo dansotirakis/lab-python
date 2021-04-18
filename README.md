@@ -1,2 +1,2 @@
-# lab-b-jetbrains-python
+# lab-python
 this is lab for challengers python
