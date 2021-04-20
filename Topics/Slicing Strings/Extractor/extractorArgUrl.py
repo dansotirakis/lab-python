@@ -16,7 +16,9 @@ class ExtractorArgumentUrl:
     def Extractor(self):
         ORIGEM = "moedaorigem"
         DESTINO = "moedadestino"
-        return self.url[self.findInitialIndices(ORIGEM):self.url.find("&")], self.url[self.findInitialIndice(DESTINO):]
+        M_ORIGEM = self.url[self.findInitialIndices(ORIGEM):self.url.find("&")]
+        M_DETINO = self.url[self.findInitialIndices(DESTINO):]
+        return M_ORIGEM, M_DETINO
 
     def findInitialIndices(self, find):
         return self.url.find(find) + len(find) + 1
