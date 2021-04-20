@@ -6,7 +6,7 @@
 + extracting a piece this string using `split()` method with parameter
 + define a `class` for work with a constructor and all other things
     - ExtractorArgumentUrl
-      - validateStringBlank
+      - ValidateStringBlank
       - Extract()
-      - findInitialIndices
-* 
+      - FindInitialIndices
+      - Replace 
