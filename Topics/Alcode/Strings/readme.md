@@ -10,3 +10,6 @@
       - Extract()
       - FindInitialIndices
       - Replace 
+      - Upper and Lower case on the strings
+      - In
+      - Startswith and Endswith
