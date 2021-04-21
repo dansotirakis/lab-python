@@ -1,10 +1,7 @@
 class ExtractorArgumentUrl:
 
     def __init__(self, url):
-        if url:
-            self.url = url.lower()
-        else:
-            raise LookupError("Invalid url!")
+        self.url = self.validate_url(url)
 
     def extractor(self):
         ORIGIN = ["moedaorigem=", "moedadestino=", "valor="]
@@ -16,7 +13,7 @@ class ExtractorArgumentUrl:
         param = []
         terminate = 0
         self.core_process(origin, size, param, terminate)
-        self.validate_parameter(param, types)
+        self.validate_parameter(size, param, types)
         return param
 
     def core_process(self, origin, size_it, param, terminate):
@@ -37,7 +34,17 @@ class ExtractorArgumentUrl:
         return self.url.find(find) + len(find)
 
     @staticmethod
-    def validate_parameter(param, types):
+    def validate_parameter(size, param, types):
+        count = 0
         for i in param:
-            if i not in types:
-                return LookupError("Invalid parameter! options : " + str(types).replace("[", "").replace("]", ""))
+            if i not in types and count == size - 1:
+                raise LookupError("Invalid parameter! options : " + str(types).replace("[", "").replace("]", ""))
+            count += 1
+
+    @staticmethod
+    def validate_url(url):
+        url_default = "https://www.bytebank.com/cambio"
+        if url and url.startswith(url_default):
+            return url.lower()
+        else:
+            raise LookupError("Invalid url!")
