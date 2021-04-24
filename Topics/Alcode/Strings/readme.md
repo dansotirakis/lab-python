@@ -13,3 +13,4 @@
       - Upper and Lower case on the strings
       - In
       - Startswith and Endswith
+      - regex partner
