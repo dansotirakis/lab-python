@@ -13,4 +13,7 @@
       - Upper and Lower case on the strings
       - In
       - Startswith and Endswith
-      - regex partner
+      - Regex partner
+      - Special Methods on class
+      - Change native str method for print class context
+      - Change native eq method for possibility a compare stances of class but consider value url
