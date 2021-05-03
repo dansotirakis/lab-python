@@ -1,6 +1,6 @@
 # lab-python
 this is lab for challengers python
 
-- JetBrains Curse
+- JetBrains Corse
 - Fundamentals
 - Resources
